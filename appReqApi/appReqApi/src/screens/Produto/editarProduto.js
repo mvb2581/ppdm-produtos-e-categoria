@@ -19,7 +19,7 @@ export default function ProdutoScreenEditar() {
   useEffect(() => {
     if (route.params) {
       setIdProduto(route.params.Id);
-      setNomeProduto(route.params.NomeProduto);
+      setNomeProduto(route.params.Nome);
       setValorProduto(String(route.params.Valor));
       setCategoriaId(route.params.CategoriaId);
     }

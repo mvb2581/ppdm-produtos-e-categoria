@@ -43,6 +43,7 @@ export default function ProdutoScreen() {
   async function loadData() {
     try {
       const response = await api.get('/produtos');
+      console.log('Produtos recebidos:', JSON.stringify(response.data.result));
       setProdutos(response.data.result);
     } catch (error) {
       console.log(error);
@@ -113,7 +114,7 @@ export default function ProdutoScreen() {
                 <View style={styles.cardContent}>
                   {/* Exibição dos dados do produto */}
                   <Text style={styles.title}>ID: {item.Id}</Text>
-                  <Text style={styles.title}>Produto: {item.NomeProduto}</Text>
+                  <Text style={styles.title}>Produto: {item.Nome}</Text>
                   <Text style={styles.title}>Valor R$: {item.Valor}</Text>
                   <Text style={styles.title}>Categoria: {item.NomeCategoria}</Text>
                 </View>
